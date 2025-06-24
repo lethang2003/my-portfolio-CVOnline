@@ -36,7 +36,7 @@ export interface CV {
 
 export async function getCV(): Promise<CV | null> {
   try {
-    const res = await fetch('http://localhost:3003/cv'); // Đổi port nếu backend khác
+    const res = await fetch('https://my-portfolio-be-t5nf.onrender.com/cv'); // Đổi port nếu backend khác
     const data = await res.json();
     return data?.[0] || null; // Giả sử chỉ có 1 CV
   } catch (error) {

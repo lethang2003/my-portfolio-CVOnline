@@ -21,7 +21,7 @@ export default function AdminForm({ defaultValues }: { defaultValues: FormData }
   });
 
   const onSubmit = async (data: FormData) => {
-    await axios.patch('http://localhost:3003/cv/your-id', data);
+    await axios.patch('https://my-portfolio-be-t5nf.onrender.com/cv/your-id', data);
     alert('Cập nhật thành công!');
   };
 

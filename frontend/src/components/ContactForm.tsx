@@ -17,7 +17,7 @@ export default function ContactForm() {
     e.preventDefault();
     setSending(true);
     try {
-      await axios.post('http://localhost:3003/contact', form);
+      await axios.post('https://my-portfolio-be-t5nf.onrender.com/contact', form);
       setSent(true);
       // message.success('✅ Thank you! I will contact you soon..');
       setForm({ name: '', email: '', message: '' });
