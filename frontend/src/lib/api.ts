@@ -35,8 +35,9 @@ export interface CV {
 }
 
 export async function getCV(): Promise<CV | null> {
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
   try {
-    const res = await fetch('https://my-portfolio-be-t5nf.onrender.com/cv'); // Đổi port nếu backend khác
+    const res = await fetch(`${API_URL}/cv`);
     const data = await res.json();
     return data?.[0] || null; // Giả sử chỉ có 1 CV
   } catch (error) {
