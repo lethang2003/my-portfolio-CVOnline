@@ -6,7 +6,7 @@ import { join } from 'path';
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
     cors: {
-      origin: ['http://localhost:3002', 'https://yourdomain.com', 'https://my-portfolio-zgvh.onrender.com'],
+      origin: ['http://localhost:3002', 'https://my-portfolio-zgvh.onrender.com'],
       credentials: true,
     },
   });
@@ -16,6 +16,7 @@ async function bootstrap() {
     prefix: '/uploads/',
   });
 
-  await app.listen(3003);
+  await app.listen(process.env.PORT || 3003);
+  console.log(`Server is running on port ${process.env.PORT || 3003}`);
 }
 bootstrap();
