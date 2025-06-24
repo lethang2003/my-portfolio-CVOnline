@@ -14,10 +14,11 @@ export default function ContactForm() {
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e: React.FormEvent) => {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL;
     e.preventDefault();
     setSending(true);
     try {
-      await axios.post('https://my-portfolio-be-t5nf.onrender.com/contact', form);
+      await axios.post(`${API_URL}/contact`, form);
       setSent(true);
       // message.success('✅ Thank you! I will contact you soon..');
       setForm({ name: '', email: '', message: '' });

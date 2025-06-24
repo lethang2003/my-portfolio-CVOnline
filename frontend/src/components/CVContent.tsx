@@ -13,6 +13,7 @@ interface CVContentProps {
 }
 
 const CVContent = forwardRef<HTMLDivElement, CVContentProps>(({ cv }, ref) => {
+     const API_URL = process.env.NEXT_PUBLIC_API_URL;
   return (
     <div
       ref={ref}
@@ -27,7 +28,7 @@ const CVContent = forwardRef<HTMLDivElement, CVContentProps>(({ cv }, ref) => {
         <div className="relative inline-block mb-6">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-lg opacity-30 animate-pulse"></div>
           <img
-            src={`https://my-portfolio-be-t5nf.onrender.com/uploads/${cv.avatar}`}
+            src={`${API_URL}/uploads/${cv.avatar}`}
             alt="Avatar"
             className="relative w-40 h-40 mx-auto rounded-full shadow-2xl object-cover border-4 border-white ring-4 ring-gradient-to-r from-blue-500 to-purple-500"
             style={{ background: 'linear-gradient(45deg, #3b82f6, #8b5cf6)', padding: '4px' }}
