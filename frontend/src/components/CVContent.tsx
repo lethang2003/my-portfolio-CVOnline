@@ -3,9 +3,9 @@
 import { forwardRef } from 'react';
 import { CV } from '@/lib/api';
 import {
-  User, Briefcase, BookOpen, Code, Database, Cpu, Tool, PenTool,
-  Users, Globe, Settings2, Lightbulb, FileText, ExternalLink, Github,
-  Mail, Phone, MapPin, Star, Zap, Award
+  User, Briefcase, BookOpen, Code,
+  Users, Globe, Settings2, Lightbulb, ExternalLink, Github,
+  Mail, Phone, MapPin, Star, Zap,
 } from 'lucide-react';
 
 interface CVContentProps {

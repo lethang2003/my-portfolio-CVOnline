@@ -6,7 +6,7 @@ import { join } from 'path';
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
     cors: {
-      origin: ['http://localhost:3002', 'https://yourdomain.com'],
+      origin: ['http://localhost:3002', 'https://yourdomain.com', 'https://my-portfolio-zgvh.onrender.com'],
       credentials: true,
     },
   });
